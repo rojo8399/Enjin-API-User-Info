@@ -1,0 +1,224 @@
+.panel {
+    padding:23px 32px;
+    box-sizing:border-box;
+}
+
+.profile.panel {
+    background-color:#131217;
+}
+.profile.panel .picture {
+    float:left;
+    padding-right:25px;
+}
+.profile.panel .picture img {
+    height:54px;
+    width:54px;
+    border:2px solid #ecf0f1;
+    display:block;
+}
+
+.profile.panel .info {
+    width:100%;
+}
+
+.profile.panel .name {
+    line-height: 25px;
+    font-size: 25px;
+    font-family: 'Open Sans', sans-serif;
+    color: #ecf0f1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    height: 29px;
+    width: calc(100% - 83px);
+}
+.profile.panel .name a {
+    line-height: 25px;
+    font-size: 25px;
+    font-family: 'Open Sans', sans-serif;
+    color: #ecf0f1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    height: 29px;
+    width: calc(100% - 83px);
+    text-decoration:none;
+}
+.profile.panel .awards {
+    display:block;
+    float:left;
+    width: calc(100% - 83px);
+    height:29px;
+    line-height:29px;
+    font-size:18px;
+}
+.profile.panel .awards .award:first-of-type {
+    margin-left:0;
+}
+.profile.panel .awards .award {
+    float:left;
+    margin-top:2px;
+    margin-left:15px;
+    position:relative;
+}
+.profile.panel .awards .award:hover {
+    cursor:pointer;
+}
+.profile.panel .awards .award .image {
+    height:27px;
+    width:27px;
+    display:block;
+}
+.profile.panel .awards .award .tooltip {
+    position:absolute;
+    height:40px;
+    background-color:#1a191f;
+    border-bottom:5px solid #e74c3c;
+    top:-23px;
+    left:45px;
+    z-index:5;
+    padding:16px 32px;
+    font-family: 'Open Sans', sans-serif;
+    width:379px;
+    opacity:0;
+    transition:.4s;
+    visibility:hidden;
+}
+.profile.panel .awards .award:hover .tooltip {
+    opacity:1;
+    visibility:visible;
+    transition:.4s;
+}
+.profile.panel .awards .award .tooltip::before {
+    right: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(0, 0, 0, 0);
+	border-right-color: #1a191f;
+	border-width: 15px;
+	margin-top: -15px;
+}
+.profile.panel .awards .award .tooltip .badge {
+    float:left;
+    margin-right:10px;
+}
+.profile.panel .awards .award .tooltip .badge img {
+    display:block;
+    height:40px;
+    width:40px;
+}
+.profile.panel .awards .award .tooltip .title {
+    color: #ecf0f1;
+    float:left;
+    height:20px;
+    width:calc(100% - 50px);
+    line-height:20px;
+}
+.profile.panel .awards .award .tooltip .desc {
+    display:block;
+    float:left;
+    height:20px;
+    width:calc(100% - 50px);
+    font-size:15px;
+    line-height:20px;
+    color:#5b5c71;
+    
+}
+
+
+
+
+
+
+
+.forum.panel {
+    background-color:#1b1a20;
+    overflow:hidden;
+}
+.forum.panel .rank {
+    font-size:15px;
+    color:#ecf0f1;
+    font-family: 'Open Sans', sans-serif;
+    float:left;
+}
+.forum.panel .rank span {
+    font-size:10px;
+    color:#5b5c71;
+}
+.forum.panel .stats {
+    font-size:15px;
+    color:#ecf0f1;
+    font-family: 'Open Sans', sans-serif;
+    float:right;
+}
+.forum.panel .stats div {
+    float:right;
+    margin-left:10px;
+    font-family: 'Open Sans', sans-serif;
+}
+.forum.panel .stats div.likes {
+    color:#2ecc71;
+    float:right;
+    margin-left:10px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+@-webkit-keyframes yellowPulse {
+  from {-webkit-box-shadow: 0 0 0px #333; box-shadow: 0 0 0px #333; }
+  50% {-webkit-box-shadow: 0 0 10px #f1c40f; box-shadow: 0 0 10px #f1c40f; }
+  to {-webkit-box-shadow: 0 0 0px #333; box-shadow: 0 0 0px #333; }
+}
+.level-bar {
+    background-color:#363543;
+    z-index:100;
+}
+.level-bar .progress {
+    height:6px;
+    background-color:#f1c40f;
+    -webkit-animation-name: yellowPulse;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    z-index:2;
+    position:relative;
+    transition:2s;
+    width:0px;
+}
+
+
+
+
+
+#info-panel .rank.panel {
+    background-color:#131217;
+    overflow:hidden;
+    height:73px;
+    padding:20px 32px;
+}
+.rank img {
+    display:block;
+    height:33px;
+    float:left;
+    margin-right:10px;
+}
+.rank .title {
+    float:left;
+    font-family: 'Open Sans', sans-serif;
+    color: #ecf0f1;
+    height:16.5px;
+    line-height:16.5px;
+    font-size:16.5px;
+    width: calc(100% - 121px);
+}
+.rank .desc {
+    float:left;
+    font-family: 'Open Sans', sans-serif;
+    color: #5b5c71;
+    height:16.5px;
+    line-height:16.5px;
+}
