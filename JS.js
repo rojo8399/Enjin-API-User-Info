@@ -19,6 +19,8 @@ var userGet = {
 
 $(document).ready(function() {
     
+    console.log("Loaded ROJO's API User Info via GitHub");
+    
     //Local Storage Pre-Load
     
     $(".profile.panel .name").html('<a href="/profile">' + localStorage.getItem('username') +'</a>');
