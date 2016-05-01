@@ -1,7 +1,7 @@
 //Edit This
 
     //Key needs access to Tags.get, Tags.getTagTypes, Stats.get
-var api_key = "99aababa20fbae6f382a5dfe58f76627966c06f93cd796d2"; //DON'T USE MASTER KEY. MAKE A NEW ONE
+//var api_key = "99aababa20fbae6f382a5dfe58f76627966c06f93cd796d2"; //DON'T USE MASTER KEY. MAKE A NEW ONE
 
 
 
