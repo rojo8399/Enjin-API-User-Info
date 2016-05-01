@@ -1,5 +1,7 @@
 //Edit This
-var api_key = "12345678901234567890"; //DON'T USE MASTER KEY. MAKE A NEW  
+
+    //Key needs access to Tags.get, Tags.getTagTypes, Stats.get
+var api_key = "99aababa20fbae6f382a5dfe58f76627966c06f93cd796d2"; //DON'T USE MASTER KEY. MAKE A NEW ONE
 
 
 
@@ -19,10 +21,7 @@ var userGet = {
 
 $(document).ready(function() {
     
-    console.log("Loaded ROJO's API User Info via GitHub");
-    
     //Local Storage Pre-Load
-    
     $(".profile.panel .name").html('<a href="/profile">' + localStorage.getItem('username') +'</a>');
     $(".profile.panel .picture img").attr("src", localStorage.getItem('avatar'));
     $(".level-bar .progress").css("width", localStorage.getItem('forum_progress'));
@@ -48,7 +47,7 @@ $(document).ready(function() {
             	"method": "Tags.get",
             	"params": {
             	    "user_id":user_id,
-            	    "api_key":"99aababa20fbae6f382a5dfe58f76627966c06f93cd796d2"
+            	    "api_key":api_key
             	}
             };
             
@@ -63,7 +62,7 @@ $(document).ready(function() {
                 var award_description = award_tooltip_stripped[1];
                 var award_image = $(this).find(".award_image img").attr("src");
                 
-                $("#info-panel .profile .awards").append('<div class="award"><img class="image" src="'+ award_image +'"><div class="tooltip"><span class="badge"><img src="'+ award_image +'"></span><span class="title">'+ award_name +'</span><span class="desc">'+ award_description +'</span></div></div>');
+                $("#info-panel .profile .awards").html('<div class="award"><img class="image" src="'+ award_image +'"><div class="tooltip"><span class="badge"><img src="'+ award_image +'"></span><span class="title">'+ award_name +'</span><span class="desc">'+ award_description +'</span></div></div>');
                 
             });
             
@@ -75,7 +74,7 @@ $(document).ready(function() {
             	"method": "Stats.get",
             	"params": {
             	    "user_id":user_id,
-            	    "api_key":"99aababa20fbae6f382a5dfe58f76627966c06f93cd796d2"
+            	    "api_key":api_key
             	}
             };
             
@@ -145,7 +144,7 @@ $(document).ready(function() {
                 	"id": Math.floor(Math.random()*100),
                 	"method": "Tags.getTagTypes",
                 	"params": {
-                	    "api_key":"99aababa20fbae6f382a5dfe58f76627966c06f93cd796d2"
+                	    "api_key":api_key
                 	}
                 };
                 
@@ -155,11 +154,6 @@ $(document).ready(function() {
                     var percentage = numusers/total_users*100 + "";
                     var percentage_formatted = percentage.split(".");
                     var percentage_final = percentage_formatted[0] + "%";
-                    
-                    console.log(percentage_final);
-                    
-                    
-                    
                     
                     $("#info-panel .rank.panel").html('<img src="http://files.enjin.com.s3.amazonaws.com/1170812/site_user_tags/' + tag_id +'.png"><span class="title">'+ tag_name +'</span><span class="desc">'+ percentage_final +' of users have this rank</span>');
                     localStorage.setItem('site_rank', '<img src="http://files.enjin.com.s3.amazonaws.com/1170812/site_user_tags/' + tag_id +'.png"><span class="title">'+ tag_name +'</span><span class="desc">'+ percentage_final +' of users have this rank</span>');
